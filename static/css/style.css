@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  border: 2px solid #000;
+  background: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.actions {
+  width: 60%;
+  height: 80%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  background: rgb(1, 40, 83);
+  color: #fff;
+}
+.todo-title {
+  display: flex;
+  justify-content: center;
+}
+.actions .control {
+  display: flex;
+  margin: 5px 0;
+}
+.actions input {
+  padding: 10px;
+  outline: none;
+  border: none;
+  /* margin: 5px 0; */
+}
+#message {
+  width: 100%;
+}
+#date {
+  flex-basis: 50%;
+  margin-right: 5px;
+}
+#submitBtn {
+  flex-basis: 50%;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: teal;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+}
+
+.tasks .task {
+  padding: 5px;
+  margin: 5px 0;
+  display: flex;
+  box-shadow: rgba(255, 234, 0, 0.3) 0px 1px 2px 0px,
+    rgba(255, 234, 0, 0.15) 0px 2px 6px 2px;
+  border-bottom: 1px solid yellow;
+}
+
+.tasks .task .action {
+  margin-left: auto;
+  display: flex;
+}
+.tasks .task .action div {
+  margin: 0 8px;
+}
+.tasks .task .action i {
+  padding: 5px;
+  font-size: 16px;
+}
+.tasks .task .action .doneBtn i {
+  color: #fff;
+  background: blue;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tasks .task .action .deleteBtn i {
+  color: #fff;
+  background: red;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.tasks .task .action .doneBtn i:hover {
+  transform: scale(1.2);
+}
+
+.tasks .task .action .deleteBtn i:hover {
+  transform: scale(1.2);
+}
+.tasks .task .info .title {
+  font-size: 16px;
+  font-weight: 600;
+}
+.tasks .task .info .due-date {
+  font-size: 12px;
+}
+
+.textCut {
+  text-decoration: line-through;
+}

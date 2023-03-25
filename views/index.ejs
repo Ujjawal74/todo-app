@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Todo App</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Todo App</h2>
+      <div class="actions">
+        <input type="text" id="message" placeholder="Type a Message" />
+        <div class="control">
+          <input type="date" id="date" />
+          <button id="submitBtn">Save</button>
+        </div>
+
+        <br /><br />
+        <div class="todo-title"><h2>My Todos</h2></div>
+        <br />
+        <div id="allTasks" class="tasks">
+          
+          <% for(let i=0; i<tasks.length; i++) { %>
+
+            <div class="task">
+              <div class="info">
+                <div class="title <%= tasks[i].done ? 'textCut' : '' %>" ><%= tasks[i].message %></div>
+                <div class="date">
+                  <i class="fa fa-calender"></i>
+                  <span class="due-date"><%= tasks[i].date %></span>
+                </div>
+              </div>
+              <div class="action">
+                <div class="doneBtn">
+                  <i class="fa fa-check" data-done="<%= tasks[i]._id %>"></i>
+                </div>
+                <div class="deleteBtn">
+                  <i class="fa fa-trash" data-del="<%= tasks[i]._id %>"></i>
+                </div>
+              </div>
+            </div>
+
+          <% } %>
+
+          
+
+          <!-- <div class="task">
+            <div class="info">
+              <div class="title">But the apples</div>
+              <div class="date">
+                <i class="fa fa-calender"></i>
+                <span class="due-date">march 24, 2022</span>
+              </div>
+            </div>
+            <div class="action">
+              <div class="doneBtn">
+                <i class="fa fa-check"></i>
+              </div>
+              <div class="deleteBtn">
+                <i class="fa fa-trash"></i>
+              </div>
+            </div>
+          </div> -->
+
+
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
